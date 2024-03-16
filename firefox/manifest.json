@@ -1,0 +1,13 @@
+{
+  "name": "shorts-to-video",
+  "version": "0.0.1",
+  "description": "Go to the YouTube video link for a Shorts video",
+  "manifest_version": 2
+  "browser_action": {
+    "default_popup": "popup.html",
+    "browser_style": true
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
