@@ -1,5 +1,6 @@
 function moveShortsToVideo(tabs) {
-  let link = tabs[0].url;
+  let tab = tabs[0];
+  let link = tab.url;
   console.log(`Attempting link switch for ${link}`);
 
   if (!/https:\/\/www.youtube.com\/shorts\/*/g.test(link)) {
@@ -9,6 +10,7 @@ function moveShortsToVideo(tabs) {
 
   let parts = link.split("shorts/");
   let videoLink = parts[0] + "watch?v=" + parts[1];
+  browser.tabs.update({url: videoLink});
   console.log(`Success, moving shorts to: ${videoLink}`);
 }
 
